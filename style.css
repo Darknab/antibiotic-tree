@@ -1,0 +1,88 @@
+:root {
+  --bg-element: #4472c4;
+  --bg-choix: #FAC307;
+  --text-color-primary: #000;
+  --text-color-secondary: #FFF;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+}
+
+.element {
+  max-width: fit-content;
+  background-color: var(--bg-element);
+  color: var(--text-color-secondary);
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+  max-height: fit-content;
+  transition: transform 0.3s ease-in-out;
+}
+
+.element:hover {
+  transform: scale(1.05);
+}
+
+.choix {
+  background-color: var(--bg-choix);
+  color: var(--text-color-primary);
+  overflow: hidden;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+#outil {
+  margin: 0 auto;
+}
+
+.sub-outil {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.sub-gentamycine {
+  max-width: 50%;
+  margin-left: auto;
+}
+
+.hidden {
+  transform: scaleY(0)
+}
+
+.animate {
+  animation: show-element 0.5s ease-in-out;
+}
+
+@keyframes show-element {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
